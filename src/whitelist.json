@@ -1,0 +1,11 @@
+{
+  "processes": [
+    "explorer.exe",
+    "chrome.exe",
+    "python.exe"
+  ],
+  "ips": [
+    "127.0.0.1",
+    "192.168.0.1"
+  ]
+}
