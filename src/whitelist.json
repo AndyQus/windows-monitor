@@ -1,8 +1,19 @@
 {
   "processes": [
+    "searchfilterhost.exe",
+    "microsoftstartfeedprovider.exe",
+    "wmiprvse.exe",
+    "wermgr.exe",
+    "smartscreen.exe",
+    "searchprotocolhost.exe",
+    "mpdefendercoreservice.exe",
+    "svchost.exe",
     "explorer.exe",
     "chrome.exe",
-    "python.exe"
+    "python.exe",
+    "brave.exe",
+    "code.exe",
+    "git.exe"
   ],
   "ips": [
     "127.0.0.1",

@@ -122,7 +122,7 @@ def check_processes():
                 continue
             known_pids.add(proc.pid)
 
-            name = proc.name()
+            name = proc.name().lower()
 
             if learning:
                 if name not in baseline["processes"]:
@@ -160,12 +160,17 @@ def check_network():
 
         try:
             proc = psutil.Process(conn.pid)
+            proc_name = proc.name().lower()
             ip = conn.raddr.ip
 
             if learning:
                 if ip not in baseline["network"]:
                     baseline["network"].append(ip)
                     save_json(BASELINE_FILE, baseline)
+                continue
+
+            # ✅ NEU: Prozess-Whitelist auch hier anwenden
+            if proc_name in whitelist["processes"]:
                 continue
 
             if ip in whitelist["ips"]:
@@ -175,12 +180,12 @@ def check_network():
                 event = {
                     "time": now(),
                     "type": "new_connection",
-                    "process": proc.name(),
+                    "process": proc_name,
                     "pid": proc.pid,
                     "remote": f"{ip}:{conn.raddr.port}"
                 }
                 log(event)
-                notify("🌐 Neue Verbindung", f"{proc.name()} → {ip}")
+                notify("🌐 Neue Verbindung", f"{proc_name} → {ip}")
 
         except (psutil.NoSuchProcess, psutil.AccessDenied):
             pass
