@@ -63,9 +63,7 @@ Erkennung über typische Media-DLLs:
 windows-monitor/
  ├─ src/
  │   ├─ monitor.py
- │   ├─ baseline.json
  │   ├─ whitelist.json
- │   └─ alerts.log
  ├─ .venv/
  └─ README.md
 ```
