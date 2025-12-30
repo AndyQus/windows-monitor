@@ -59,7 +59,7 @@ Erkennung über typische Media-DLLs:
 ---
 
 ## 📁 Projektstruktur
-
+```
 windows-monitor/
  ├─ src/
  │   ├─ monitor.py
@@ -68,7 +68,7 @@ windows-monitor/
  │   └─ alerts.log
  ├─ .venv/
  └─ README.md
-
+```
 ---
 
 ## ⚙️ Konfiguration
