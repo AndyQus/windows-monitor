@@ -24,6 +24,15 @@ SUSPICIOUS_DLL_KEYWORDS = [
     "microphone"
 ]
 
+# ---------- Ensure log file exists ----------
+
+os.makedirs(os.path.dirname(LOG_FILE), exist_ok=True)
+
+if not os.path.exists(LOG_FILE):
+    with open(LOG_FILE, "w", encoding="utf-8") as f:
+        pass
+
+
 # ============================================
 
 
