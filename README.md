@@ -1,4 +1,3 @@
-@'
 # Windows Monitor (Mini-EDR)
 
 Ein leichtgewichtiger, transparenter **Endpoint-Monitor für Windows 10/11**, geschrieben in Python.  
@@ -120,4 +119,3 @@ Sichtbarkeit statt blinder Sicherheit.
 ## 📜 Lizenz
 
 Open Source, frei nutzbar.
-'@ | Out-File README.md -Encoding utf8
